@@ -1,0 +1,110 @@
+
+<!-- create new user form -->
+
+<section class="createuser rounded rounded">
+    <div class="container mt-4">
+        <h4 class="mb-3">Create New User</h4>
+        <div class="card">
+            <div class="card-body">
+                <form (ngSubmit)="onSubmit()" #f="ngForm">
+                    <div class="d-flex justify-content-between">
+                        <h5>Personal Details</h5><p class="text-muted font-weight-light">*Marked fields are necessary</p>
+                    </div>
+                    <hr>
+    
+                    <div class="form-row mb-4 rounded">
+                      <div class="col-md-4">
+                        <label for="first-name">First name<span style="color: red;">*</span></label>
+                        <input required type="text" ngModel #firstname="ngModel" class="form-control" id="first-name" name="first-name" placeholder="First name"
+                        pattern="^[a-zA-Z]*$">
+                      <p class="alert alert-danger" *ngIf="firstname.touched && firstname.invalid && !firstname.dirty">
+                        This field is Mandatory
+                      </p>
+                      <p class="alert alert-danger" *ngIf="firstname.invalid && firstname.dirty">
+                        This field should not containe number & special characters
+                      </p>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="last-name">Last name<span style="color: red;">*</span></label>
+                        <input required type="text" ngModel #lastname="ngModel" class="form-control" id="last-name" name="last-name" placeholder="Last name">
+                        <p class="alert alert-danger" *ngIf="lastname.touched && lastname.invalid">
+                          This field is Mandatory
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="form-row mb-4 rounded">
+                        <div class="col-md-4">
+                            <label for="select-gender">Gender<span style="color: red;">*</span></label>
+                            <select required id="select-gender" ngModel #selectgender="ngModel" name="select-gender" class="form-control">
+                              <option selected>Select gender</option>
+                              <option value="male">Male</option>
+                              <option value="female">Female</option>
+                              <option value="others">Others</option>
+    
+                            </select>
+                            <p class="alert alert-danger" *ngIf="selectgender.touched && selectgender.invalid">
+                              This field is Mandatory
+                            </p>
+                          </div>
+                          <div class="col-md-4">
+                            <label for="dateofbirth">Date-of-Birth<span style="color: red;">*</span></label>
+                            <input required type="date" ngModel #dateofbirth="ngModel" id="dateofbirth" name="dateofbirth" class="form-control" >
+                          <p class="alert alert-danger" *ngIf="dateofbirth.touched && dateofbirth.invalid">
+                            This field is Mandatory
+                          </p>
+                          </div>     
+                    </div>
+                    
+                    <div class="form-row mb-4 rounded">
+                        <div class="col-md-4">
+                          <label for="email">Email<span style="color: red;">*</span></label>
+                          <input required type="text" ngModel #email="ngModel" id="email" name="email" class="form-control" placeholder="Email"
+                          pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                        <p class="alert alert-danger" *ngIf="email.touched && email.invalid && !email.dirty">
+                          This field is Mandatory
+                        </p>
+                        <p class="alert alert-danger" *ngIf="email.dirty && email.invalid">
+                          Please enter valid Email Address
+                        </p>
+                        </div>
+                        <div class="col-md-4">
+                          <label for="phone-number">Phone number<span style="color: red;">*</span></label>
+                          <input required type="text" ngModel #phonenumber="ngModel" id="phone-number" name="phone-number" class="form-control" placeholder="Phone number">
+                        <p class="alert alert-danger" *ngIf="phonenumber.touched && phonenumber.invalid">
+                          This field is Mandatory
+                        </p>
+                        </div>
+                      </div>
+
+                      <div class="mb-2">
+                            <h5>Create Password</h5>
+                      </div>
+                      <hr>
+                      <div class="form-row mb-4 rounded">
+                        <div class="col-md-4">
+                          <label for="Password">Password<span style="color: red;">*</span></label>
+                          <input required type="text" ngModel #Password="ngModel" id="Password" name="Password" class="form-control" placeholder="Password">
+                        <p class="alert alert-danger" *ngIf="Password.touched && Password.invalid">
+                          This field is Mandatory
+                        </p>
+                        </div>
+                        <div class="col-md-4">
+                          <label for="confirm-password">Confirm-password<span style="color: red;">*</span></label>
+                          <input required type="text" ngModel #confirmpassword="ngModel" id="confirm-password" name="confirm-password" class="form-control" placeholder="confirm-password">
+                        <p class="alert alert-danger" *ngIf="confirmpassword.touched && confirmpassword.invalid">
+                          This field is Mandatory
+                        </p>
+                        </div>
+                      </div>
+                      <div class="form-row mt-2 rounded">
+                        <div class="col-md-4">
+                            <button class="btn px-4 btn-primary" [disabled]="f.invalid" type="submit">Submit</button>
+
+                        </div>
+                      </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+</section>

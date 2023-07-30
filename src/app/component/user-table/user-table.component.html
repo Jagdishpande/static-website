@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row mb-5 mt-5">
+        <div class="col-12">
+            <div class="head d-flex justify-content-between mb-4 align-items-centers">
+                <h1 class="main-heading">Table</h1>
+                <input type="text" class="form-control w-25 border border-dark p-4 position-relative" placeholder="Search">
+                <mat-icon class="serarch-icon font-weight-bold">search</mat-icon>
+            </div>
+    
+            <div class="card">
+                <div class="card-body">
+                    <div class="head d-flex justify-content-between align-items-center">
+    
+                        <h2>History</h2>
+    
+                    </div>
+                    <div class="">
+    
+                        <table mat-table [dataSource]="dataSource">
+    
+                            <!-- Position Column -->
+                            <ng-container matColumnDef="position">
+                                <th mat-header-cell *matHeaderCellDef> No. </th>
+                                <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                            </ng-container>
+    
+                            <!-- Name Column -->
+                            <ng-container matColumnDef="name">
+                                <th mat-header-cell *matHeaderCellDef> User Name </th>
+                                <td mat-cell *matCellDef="let element"> {{element.uname}} </td>
+                            </ng-container>
+    
+                            <!-- Weight Column -->
+                            <ng-container matColumnDef="userid">
+                                <th mat-header-cell *matHeaderCellDef> User ID </th>
+                                <td mat-cell *matCellDef="let element"> {{element.uid}} </td>
+                            </ng-container>
+    
+                            <!-- Symbol Column -->
+                            <ng-container matColumnDef="role">
+                                <th mat-header-cell *matHeaderCellDef> Role </th>
+                                <td mat-cell *matCellDef="let element"> {{element.role}} </td>
+                            </ng-container>
+    
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                        </table>
+    
+                        <mat-paginator [pageSizeOptions]="[5 ,10, 15, 20]" showFirstLastButtons
+                            aria-label="Select page of periodic elements">
+                        </mat-paginator>
+    
+                    </div>
+    
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

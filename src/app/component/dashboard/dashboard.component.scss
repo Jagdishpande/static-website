@@ -1,0 +1,177 @@
+
+.box{
+    // height:242px ;
+    border-radius:15px; 
+    background-color:#FFFFFF;
+}
+
+.box:hover{
+    background-color: yellow;
+}
+.number{
+    width:97.5px; ;
+    height:97.5px;
+    border: 2.5px solid #292D32;
+    border-radius: 15px;
+} 
+// .topsection {
+    // display: flex;
+    // flex-direction: row;
+// }
+ 
+
+.number h2
+    {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-top: 24px;
+    }
+
+.progressbar{
+    height: 7px;
+    width: 100%;
+    background-color: #0a0a17;
+    border-radius: 6px;
+
+}
+.progressbar2{
+    height: 7px;
+    width: 50%;
+    background-color:#aaa3ff;
+    border-radius: 6px;
+
+}
+i{
+    color: #aaa3ff;
+}
+h2{
+    font-size: 24px;
+    font-weight: bold;
+    color: #121212;
+}
+
+h3,span{
+    font-weight: 600;
+    font-size: 15px;
+}
+
+
+
+//loan section
+
+.loan-container{
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.loan-box{
+    position: relative;
+}
+
+.vector{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.img{
+    color: red;
+}
+
+.four{
+    border-left: 2px solid white;
+}
+
+
+.one{
+    height: 500px;
+}
+
+.loanvector{
+   
+    height: 235px;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    flex-direction: column;
+}
+
+.bg-purple{
+    background-image: linear-gradient(to left,#aaa3ff,rgba(170,163,255,1));
+
+}
+.loanimg{
+    background-image: url("../../../assets/img/Vector.png");
+    background-repeat: no-repeat;
+}
+
+.loans{
+    position: relative;
+}
+
+.vector2{
+    position: absolute;
+    top: 50px;
+    right: 0;
+}
+
+
+
+
+
+.images{
+    width: 250px;
+height: 250px;
+border-radius: 2px;    margin-bottom: 2px;
+
+}
+
+.imageone{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.reverse{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.textrelative{
+    position: relative;
+}
+.textabosolute{
+    position: absolute;
+    top:0;
+    top:65%;
+   
+}
+.textabosolute>h2{
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+
+    .loanvector{
+        border-radius: 15px;
+        margin-bottom: 20px;
+    }
+    .vector2 {
+        display: none;
+    }
+
+    .img3 {
+        background-image: url('../../../assets/img/Vector\ 2.png');
+        // height: 100%;
+    }
+    .images{
+    width: 380px;
+
+    }
+}

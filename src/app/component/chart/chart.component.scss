@@ -1,0 +1,31 @@
+.chart{
+    width: 100%;
+    background-color: white;
+    padding: 15px;
+}
+
+
+.progressbar,
+.progressbar2,
+.progressbar3 {
+    height: 30px;
+    width: 100%;
+    background-color: #AAA3FF;
+}
+
+.progressbar2 {
+    background-color: #000 !important;
+    width: 70%;
+
+}
+
+.progressbar3 {
+    width: 10%;
+
+}
+
+.demo {
+    font-size: 22px;
+    font-weight: 500;
+}
+
